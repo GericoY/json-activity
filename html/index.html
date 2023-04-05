@@ -13,8 +13,8 @@
     </head>
     <body>
         <div class="container mt-40">
-            <div id="demo">
-            
+            <div id="demo" class="row mt-30">
+
             </div>
         </div>
 
@@ -29,23 +29,23 @@
 
                     for(i = 0; i < marvel_heroes.length;i++){
                         txt +=`
-                            <div class="row mt-30">
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="box14">
-                                    <img class="pic-1" src="/img/${marvel_heroes[i].img}">
-                                        <div class="box-content">
-                                            <h3 class="title">${marvel_heroes[i].name}</h3>
-                                            <span class="post">${marvel_heroes[i].alias}</span>
-                                            <h3 class="text">${marvel_heroes[i].equipment}</h3>
-                                            <h3 class="text">
-                                                <ul>`;
-                                                for (j = 0; j <marvel_heroes[i].appearances.length; j++){
-                                                    txt += `<li>${marvel_heroes[i].appearances[j]}</li>`;
-                                                }
-                                            txt +=`    
-                                            </ul>
-                                            </h3>
-                                        </div>
+                            <div class="col-md-4 col-sm-6 mb-30">
+                                <div class="box14">
+                                <img class="pic-1" src="/img/${marvel_heroes[i].img}">
+                                    <div class="box-content">
+                                        <h3 class="title">${marvel_heroes[i].name}</h3>
+                                        <span class="post">${marvel_heroes[i].alias}</span>
+                                        <br>
+                                        <h3 class="text">Equipment: ${marvel_heroes[i].equipment}</h3>
+                                        <h3 class="text">Appearances:</h3>
+                                        <h3 class="text">
+                                            <ul>`;
+                                            for (j = 0; j <marvel_heroes[i].appearances.length; j++){
+                                                txt += `<li>${marvel_heroes[i].appearances[j]}</li>`;
+                                            }
+                                        txt +=`    
+                                        </ul>
+                                        </h3>
                                     </div>
                                 </div>
                             </div>
