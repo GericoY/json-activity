@@ -49,4 +49,6 @@
 
     ];
 
+    $data = json_encode($marvel_heroes);
+    echo $data;
 ?>

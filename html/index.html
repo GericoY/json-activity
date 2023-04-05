@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Hover Effect Style</title>
+        <title>Marvel Heroes</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -12,27 +12,51 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
-
-        <!------------------ Hover Effect Style : Demo - 14 --------------->
-       <div class="container mt-40">
-            <h3 class="text-center">Hover Effect Style : Demo - 14</h3>
-            <div class="row mt-30">
-                <div class="col-md-4 col-sm-6">
-                    <div class="box14">
-                        <img class="pic-1" src="https://www.w3schools.com/bootstrap4/img_avatar3.png">
-                        <div class="box-content">
-                            <h3 class="title">Williamson</h3>
-                            <span class="post">Web Developer</span>
-                            <ul class="icon">
-                                <li><a href="#"><i class="fa fa-search"></i></a></li>
-                                <li><a href="#"><i class="fa fa-link"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        <div class="container mt-40">
+            <div id="demo">
+            
             </div>
         </div>
-        
+
+        <script>
+            var txt = "";
+            const xmlhttp = new XMLHttpRequest();
+            xmlhttp.onload = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                    let marvel_heroes = JSON.parse(this.responseText);
+                    console.log(marvel_heroes);
+                    let txt = "";
+
+                    for(i = 0; i < marvel_heroes.length;i++){
+                        txt +=`
+                            <div class="row mt-30">
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="box14">
+                                    <img class="pic-1" src="/img/${marvel_heroes[i].img}">
+                                        <div class="box-content">
+                                            <h3 class="title">${marvel_heroes[i].name}</h3>
+                                            <span class="post">${marvel_heroes[i].alias}</span>
+                                            <h3 class="text">${marvel_heroes[i].equipment}</h3>
+                                            <h3 class="text">
+                                                <ul>`;
+                                                for (j = 0; j <marvel_heroes[i].appearances.length; j++){
+                                                    txt += `<li>${marvel_heroes[i].appearances[j]}</li>`;
+                                                }    
+                                            `</ul>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }
+                    document.getElementById("demo").innerHTML = txt;
+                }
+            }
+            xmlhttp.open("GET", "http://json-activity.test/marvel-heroes.php");
+            xmlhttp.send();
+        </script>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
     </body>
