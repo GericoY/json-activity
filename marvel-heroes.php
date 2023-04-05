@@ -39,7 +39,7 @@
         ],
 
         [
-            "img" => "Black_Widow.jpg",
+            "img" => "BlackWidow.jpg",
             "name" => "Natasha Romanoff",
             "species" => "Human",
             "alias" => "Black Widow",
