@@ -33,8 +33,8 @@
             "img" => "Hulk.jpg",
             "name" => "Bruce Banner",
             "species" => "Human",
-            "alias" => "Hulk"
-            "equipment" => "Sakaaran Battle Axe"
+            "alias" => "Hulk",
+            "equipment" => "Sakaaran Battle Axe",
             "appearances" => ["Hulk", "The Avengers", "Avengers: Infinity War", "Avengers: Endgame"]
         ],
 
@@ -47,5 +47,6 @@
             "appearances" => ["The Avengers", "Captain America: Civil War", "Avengers: Infinity War", "Avengers: Endgame"]
         ],
 
-    ]
+    ];
+
 ?>
