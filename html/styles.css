@@ -28,26 +28,25 @@
     width: 100%;
 }
 
-.bg-about{
-    position: relative;
-    width: 100%;
-    height: 70%;
-    background-color: #383838;
-}
-
-.p-about{
-    padding-top: 20%;
-    padding-bottom: 20%;
-}
-
-.p-about-content{
+.content-title{
     font-size: 5rem;
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
-.button{
-    font-size: 5rem;
-    border-radius: 10px;
-    padding: 3px 100px;
+.bg-about{
+    position: relative;
+    width: 100%;
+    height: 30%;
+}
+
+.p-about{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.p-about-content{
+    font-size: 4rem;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }

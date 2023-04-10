@@ -15,19 +15,19 @@
         <div>
             <img src="/img/bg2.jpg" class="img-header">
         </div>
-        <div id="header" class="bg-about">
-            <div class="d-flex justify-content-center">
-                <div class="text-center p-about">
-                    <h1 class="text-white p-about-content">Marvel Heroes Collection</h1>
-                    <h2 class="text-white p-about-content">Presented By: Gerico S. Yutuc</h2>
-                    <button type="button" class="btn btn-danger button" href="">About</button>
-                </div>
+
+        <div class="container">
+            <h1 class="content-title text-center">Marvel Hero List:</h1>
+            <div id="demo" class="row">
+
             </div>
         </div>
 
-        <div class="container mt-40">
-            <div id="demo" class="row mt-30">
-
+        <div id="header" class="bg-about">
+            <div class="d-flex justify-content-center">
+                <div class="text-center p-about">
+                    <h2 class="p-about-content">Developed By: Gerico S. Yutuc</h2>
+                </div>
             </div>
         </div>
 
@@ -45,7 +45,7 @@
                             <div class="col-md-4 col-sm-6 mb-30">
                                 <div class="box14">
                                 <img class="pic-1" src="/img/${marvel_heroes[i].img}">
-                                    <div class="box-content">
+                                    <div class="box-content text-center">
                                         <h3 class="title">${marvel_heroes[i].name}</h3>
                                         <span class="post">${marvel_heroes[i].alias}</span>
                                         <br>
@@ -61,6 +61,7 @@
                                         </h3>
                                     </div>
                                 </div>
+                                <br>
                             </div>
                         `;
                     }
